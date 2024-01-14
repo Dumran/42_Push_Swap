@@ -6,7 +6,7 @@
 /*   By: mehkekli <mehkekli@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 15:14:04 by mehkekli          #+#    #+#             */
-/*   Updated: 2024/01/04 15:14:06 by mehkekli         ###   ########.fr       */
+/*   Updated: 2024/01/14 15:02:50 by mehkekli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ void	ft_start_inner(t_list **a, t_list **b, int pivot, int pass_count)
 
 static void	ft_prepare_a(t_list **a, t_list **b)
 {
-	t_op	op;
 	int		min;
 	int		min_op_cost;
 

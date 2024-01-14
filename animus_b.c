@@ -6,7 +6,7 @@
 /*   By: mehkekli <mehkekli@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 15:14:32 by mehkekli          #+#    #+#             */
-/*   Updated: 2024/01/04 15:14:33 by mehkekli         ###   ########.fr       */
+/*   Updated: 2024/01/14 15:02:56 by mehkekli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,6 @@ static int	ft_cal_rrb_cost(t_list *b, int dest)
 
 int	ft_cal_mov_b_op(t_list *b, int pass, int op)
 {
-	t_list	*tmp;
 	int		dest;
 	int		count;
 

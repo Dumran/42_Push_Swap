@@ -6,7 +6,7 @@
 /*   By: mehkekli <mehkekli@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 15:14:27 by mehkekli          #+#    #+#             */
-/*   Updated: 2024/01/04 15:14:29 by mehkekli         ###   ########.fr       */
+/*   Updated: 2024/01/14 15:07:57 by mehkekli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	ft_case_five(t_list **a, t_list **b, int pivot)
 	else if (ft_lstsize(*a) == 4)
 	{
 		ft_init_op(&op, ft_lstmin(*a));
-		ft_set_op(&op, ft_lstmin(*a), *a, *b);
+		ft_set_op(&op, *a, *b);
 		ft_run_op_n(a, b, op.a, op.a_c);
 		ft_run_op(a, b, PB);
 	}

@@ -6,7 +6,7 @@
 /*   By: mehkekli <mehkekli@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 15:12:49 by mehkekli          #+#    #+#             */
-/*   Updated: 2024/01/12 11:00:26 by mehkekli         ###   ########.fr       */
+/*   Updated: 2024/01/14 15:06:10 by mehkekli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ void			ft_set_op_counts(t_op *op, t_op_comb comb);
 void			ft_cal_op_cost(t_op *op, t_list *a, t_list *b);
 void			ft_prepare_b_for_pa(t_list **a, t_list **b);
 int				ft_is_min_b(t_list *b);
-void			ft_set_op(t_op *op, int pass, t_list *a, t_list *b);
+void			ft_set_op(t_op *op, t_list *a, t_list *b);
 int				ft_lstmin(t_list *stack);
 
 void			ft_run_op(t_list **a, t_list **b, t_op_type ot);

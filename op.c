@@ -6,13 +6,13 @@
 /*   By: mehkekli <mehkekli@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 15:13:42 by mehkekli          #+#    #+#             */
-/*   Updated: 2024/01/04 15:13:44 by mehkekli         ###   ########.fr       */
+/*   Updated: 2024/01/14 15:06:32 by mehkekli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_set_op(t_op *op, int pass, t_list *a, t_list *b)
+void	ft_set_op(t_op *op, t_list *a, t_list *b)
 {
 	t_min_op_cost	moc;
 
@@ -109,7 +109,7 @@ t_op	ft_select_op(t_list *a, t_list *b, int pivot)
 		if (*((int *) tmp->content) < pivot)
 		{
 			ft_init_op(&ops[i], *((int *) tmp->content));
-			ft_set_op(&ops[i++], *((int *) tmp->content), a, b);
+			ft_set_op(&ops[i++], a, b);
 		}
 		tmp = tmp->next;
 	}

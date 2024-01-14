@@ -6,7 +6,7 @@
 /*   By: mehkekli <mehkekli@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 15:14:13 by mehkekli          #+#    #+#             */
-/*   Updated: 2024/01/04 15:14:15 by mehkekli         ###   ########.fr       */
+/*   Updated: 2024/01/14 15:16:12 by mehkekli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	ft_run_instructions(t_list **a, t_list **b)
 
 	inst = get_next_line(STDIN_FILENO);
 	if (!inst)
-		return (-1);
+		return (-2);
 	while (inst)
 	{
 		if (!ft_is_valid_inst(inst))
@@ -84,10 +84,19 @@ int	ft_run_instructions(t_list **a, t_list **b)
 	return (0);
 }
 
+void	ft_print_result(t_list *a)
+{
+	if (ft_is_sorted(a))
+		ft_printf("OK\n");
+	else
+		ft_printf("KO\n");
+}
+
 int	main(int ac, char **av)
 {
 	t_list	*a;
 	t_list	*b;
+	int		rsp;
 
 	if (ac <= 1)
 		return (1);
@@ -98,14 +107,12 @@ int	main(int ac, char **av)
 		ft_exiterr(2, NULL);
 	if (ft_is_duplicate(a))
 		ft_exiterr(3, a);
-	if (ft_is_sorted(a))
-		ft_exitsafe(a, EXIT_SUCCESS);
-	if (ft_run_instructions(&a, &b) == -1)
+	rsp = ft_run_instructions(&a, &b);
+	if (rsp == -1)
 		return (ft_dispose(b), ft_exiterr(3, a), 3);
-	if (ft_is_sorted(a))
-		ft_printf("OK\n");
-	else
-		ft_printf("KO\n");
+	if (rsp == -2)
+		return (ft_print_result(a), ft_dispose(b), ft_dispose(a), 3);
+	ft_print_result(a);
 	ft_dispose(a);
 	ft_dispose(b);
 }
