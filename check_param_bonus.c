@@ -6,7 +6,7 @@
 /*   By: mehkekli <mehkekli@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 15:14:23 by mehkekli          #+#    #+#             */
-/*   Updated: 2024/01/12 10:39:07 by mehkekli         ###   ########.fr       */
+/*   Updated: 2024/01/14 15:33:40 by mehkekli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_check_param(int ac, char **av)
 		num = ft_atoi_l(av[i]);
 		if (num > INT32_MAX || num < INT32_MIN)
 			ft_exiterr(7, NULL);
-		if (num == 0 && !(ft_strnstr(av[i], "0", ft_strlen(av[i]))))
+		if (num == 0 && ft_strncmp(av[i], "0", ft_strlen(av[i]) != 0))
 			ft_exiterr(2, NULL);
 		i++;
 	}
